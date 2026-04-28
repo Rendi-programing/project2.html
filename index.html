@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Aplikasi To‑Do List</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Aplikasi To‑Do List</h1>
+    </header>
+
+    <section class="card" aria-labelledby="todo-title">
+      <div class="add-row">
+        <input id="taskInput" type="text" placeholder="Tambahkan tugas baru... (tekan Enter untuk simpan)" />
+        <button id="addBtn" class="btn">Tambah</button>
+      </div>
+
+      <div class="controls">
+        <div class="filters" role="tablist">
+          <button data-filter="all" class="active">Semua</button>
+          <button data-filter="active">Aktif</button>
+          <button data-filter="completed">Selesai</button>
+        </div>
+        <button id="clearCompleted" class="icon-btn small">Hapus selesai</button>
+      </div>
+
+      <ul id="todoList" class="todo-list"></ul>
+
+      <div class="meta">
+        <div class="small" id="countText">0 tugas tersisa</div>
+        <div class="small">Menyimpan otomatis ke <strong>localStorage</strong></div>
+      </div>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
